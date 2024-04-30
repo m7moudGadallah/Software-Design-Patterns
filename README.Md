@@ -8,7 +8,7 @@
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Resources](#resources)
-  - [Disclaimer](#disclaimer)
+  - [Disclaimers](#disclaimers)
   - [License](#license)
 
 <!-- /TOC -->
@@ -22,7 +22,7 @@ This repository contains the implementation and examples of the most common soft
 - [Ultimate Design Patterns Course By (Mahmoud Youssef) on Udemy](https://www.udemy.com/course/ultimate-design-patterns/)
 - [Design Patterns on GURU](https://refactoring.guru/design-patterns)
 
-## Disclaimer
+## Disclaimers
 
 - This repository for practicing and learning software design patterns from [Ultimate Design Patterns Course By (Mahmoud Youssef) on Udemy](https://www.udemy.com/course/ultimate-design-patterns/), so some of the examples are from the course and some are from other sources.
 - This repository is a work in progress. The examples are not exhaustive and may not cover all the possible scenarios. The examples are written in TypeScript, but the concepts can be applied to any programming language.
