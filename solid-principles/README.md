@@ -20,6 +20,7 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles b
     - [LSP Examples](#lsp-examples)
       - [Employee Example](#employee-example)
     - [Order Example](#order-example)
+  - [Interface Segregation Principle ISP](#interface-segregation-principle-isp)
 
 <!-- /TOC -->
 
@@ -343,5 +344,11 @@ class DeliveryOrder extends Order  implements IDeliveryOrderPriceCalculator{
 
 class PickUpOrder extends Order {}
 ```
+
+_**[TOP ↑](#solid-principles)**_
+
+## Interface Segregation Principle (ISP)
+
+- No code should be forced to depend on methods it does not use. ISP splits interfaces that are very large into smaller and more specific ones.
 
 _**[TOP ↑](#solid-principles)**_
