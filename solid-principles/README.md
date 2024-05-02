@@ -21,6 +21,8 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles b
       - [Employee Example](#employee-example)
     - [Order Example](#order-example)
   - [Interface Segregation Principle ISP](#interface-segregation-principle-isp)
+  - [ISP Examples](#isp-examples)
+    - [Task Management Example](#task-management-example)
 
 <!-- /TOC -->
 
@@ -350,5 +352,65 @@ _**[TOP ↑](#solid-principles)**_
 ## Interface Segregation Principle (ISP)
 
 - No code should be forced to depend on methods it does not use. ISP splits interfaces that are very large into smaller and more specific ones.
+
+## ISP Examples
+
+### Task Management Example
+
+**Before:**
+
+![Task Management Example Before](./uml-diagrams/ISP/task-management-before.png)
+
+```typescript
+interface ITaskManager {
+  createTask(taskName: string): void;
+  assignTask(taskName: string, assign: string): void;
+  sendNotification(message: string, recipient: string): void;
+}
+
+class TaskService implements TaskManager {
+  public override createTask(taskName: string): void {
+    // Create task logic
+  }
+
+  public override assignTask(taskName: string, assign: string): void {
+    // Assign task logic
+  }
+
+  public override sendNotification(message: string, recipient: string): void {
+    // Hey i didn't need this method, so i will throw an error that i didn't support this method
+  }
+}
+```
+
+> This design violates the SRP principle because the `TaskService` class has many responsibilities, and also violates the ISP principle because the `TaskService` class is forced to implement methods that it does not use.
+
+**After:**
+
+![Task Management Example After](./uml-diagrams/ISP/task-management-after.png)
+
+```typescript
+interface ITaskCreator {
+  createTask(taskName: string): void;
+}
+
+interface ITaskAssigner {
+  assignTask(taskName: string, assign: string): void;
+}
+
+interface INotificationSender {
+  sendNotification(message: string, recipient: string): void;
+}
+
+class TaskService implements ITaskCreator, ITaskAssigner {
+  public override createTask(taskName: string): void {
+    // Create task logic
+  }
+
+  public override assignTask(taskName: string, assign: string): void {
+    // Assign task logic
+  }
+}
+```
 
 _**[TOP ↑](#solid-principles)**_
