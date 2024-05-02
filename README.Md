@@ -22,6 +22,10 @@ This repository contains the implementation and examples of the most common soft
 - [Ultimate Design Patterns Course By (Mahmoud Youssef) on Udemy](https://www.udemy.com/course/ultimate-design-patterns/)
 - [Design Patterns on GURU](https://refactoring.guru/design-patterns)
 
+## Contents
+
+- [SOLID Principles](./solid-principles/)
+
 ## Disclaimers
 
 - This repository for practicing and learning software design patterns from [Ultimate Design Patterns Course By (Mahmoud Youssef) on Udemy](https://www.udemy.com/course/ultimate-design-patterns/), so some of the examples are from the course and some are from other sources.
