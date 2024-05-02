@@ -23,6 +23,8 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles b
   - [Interface Segregation Principle ISP](#interface-segregation-principle-isp)
     - [ISP Examples](#isp-examples)
       - [Task Management Example](#task-management-example)
+  - [Dependency Inversion Principle DIP](#dependency-inversion-principle-dip)
+    - [DIP Example](#dip-example)
 
 <!-- /TOC -->
 
@@ -412,5 +414,22 @@ class TaskService implements ITaskCreator, ITaskAssigner {
   }
 }
 ```
+
+_**[TOP ↑](#solid-principles)**_
+
+## Dependency Inversion Principle (DIP)
+
+- High-Level modules should not depend on Low-Level modules, Both should depend on abstractions.
+- Abstractions should not depend on details, Details should depend on abstractions
+
+### DIP Example
+
+**Before:**
+
+![DIP Example Before](./uml-diagrams/DIP/dip-before.png)
+
+**After:**
+
+![DIP Example After](./uml-diagrams/DIP/dip-after.png)
 
 _**[TOP ↑](#solid-principles)**_
