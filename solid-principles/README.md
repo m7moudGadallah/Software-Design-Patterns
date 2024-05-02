@@ -2,6 +2,22 @@
 
 SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin (also known as Uncle Bob).
 
+## Table of Contents
+
+<!-- TOC -->
+
+- [SOLID Principles](#solid-principles)
+  - [Table of Contents](#table-of-contents)
+  - [Single Responsibility Principle SRP](#single-responsibility-principle-srp)
+    - [SRP Examples](#srp-examples)
+      - [Email Service Example](#email-service-example)
+      - [OrderManagement Service Example](#ordermanagement-service-example)
+  - [Open/Closed Principle OCP](#openclosed-principle-ocp)
+    - [OCP Examples](#ocp-examples)
+      - [DiscountCalculator Example](#discountcalculator-example)
+
+<!-- /TOC -->
+
 ## Single Responsibility Principle (SRP)
 
 A class should have only one reason to change, meaning that a class should have only one job.
@@ -27,6 +43,8 @@ A class should have only one reason to change, meaning that a class should have 
 **After:**
 
 ![OrderManagement Service Example After](./uml-diagrams/SRP/order-management-after.png)
+
+_**[TOP ↑](#solid-principles)**_
 
 ## Open/Closed Principle (OCP)
 
@@ -96,3 +114,5 @@ class DiscountCalculator {
   }
 }
 ```
+
+_**[TOP ↑](#solid-principles)**_
