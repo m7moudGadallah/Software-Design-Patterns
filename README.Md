@@ -8,6 +8,7 @@
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Resources](#resources)
+  - [Contents](#contents)
   - [Disclaimers](#disclaimers)
   - [License](#license)
 
@@ -25,6 +26,7 @@ This repository contains the implementation and examples of the most common soft
 ## Contents
 
 - [SOLID Principles](./solid-principles/)
+- [Design Patterns](./design-patterns/)
 
 ## Disclaimers
 
