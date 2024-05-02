@@ -21,8 +21,8 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles b
       - [Employee Example](#employee-example)
     - [Order Example](#order-example)
   - [Interface Segregation Principle ISP](#interface-segregation-principle-isp)
-  - [ISP Examples](#isp-examples)
-    - [Task Management Example](#task-management-example)
+    - [ISP Examples](#isp-examples)
+      - [Task Management Example](#task-management-example)
 
 <!-- /TOC -->
 
@@ -353,9 +353,9 @@ _**[TOP ↑](#solid-principles)**_
 
 - No code should be forced to depend on methods it does not use. ISP splits interfaces that are very large into smaller and more specific ones.
 
-## ISP Examples
+### ISP Examples
 
-### Task Management Example
+#### Task Management Example
 
 **Before:**
 
