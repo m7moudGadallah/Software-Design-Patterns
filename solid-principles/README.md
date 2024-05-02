@@ -19,6 +19,7 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles b
   - [Liskov Substitution Principle LSP](#liskov-substitution-principle-lsp)
     - [LSP Examples](#lsp-examples)
       - [Employee Example](#employee-example)
+    - [Order Example](#order-example)
 
 <!-- /TOC -->
 
@@ -263,6 +264,84 @@ class PartTimeEmployeeSalaryCalculator
     return employee.hoursWorked * 50;
   }
 }
+```
+
+### Order Example
+
+**Before:**
+
+![Order Example Before](./uml-diagrams/LSP/order-before.png)
+
+```typescript
+class Order {
+  protected id: string;
+  protected price: number;
+
+  constructor(id: string, price: number) {
+    this.id = id;
+    this.price = price;
+  }
+
+  public getId():string() {
+    return this.id;
+  }
+
+  public getPrice():number {
+    return this.price;
+  }
+
+  public calculateTotalPrice(): number {
+    return this.price;
+  }
+}
+
+class DeliveryOrder extends Order {
+  private static readonly SHIPPING_COST: number = 10;
+
+  public override calculateTotalPrice() {
+    return super.calculateTotalPrice() + DeliveryOrder.SHIPPING_COST;
+  }
+}
+
+class PickUpOrder extends Order {}
+```
+
+**After:**
+
+![Order Example After](./uml-diagrams/LSP/order-after.png)
+
+```typescript
+class Order {
+  protected id: string;
+  protected price: number;
+
+  constructor(id: string, price: number) {
+    this.id = id;
+    this.price = price;
+  }
+
+  public getId():string() {
+    return this.id;
+  }
+
+  public getPrice():number {
+    return this.price;
+  }
+}
+
+interface IDeliveryOrderPriceCalculator {
+  calculateTotalPrice(order: Order): number;
+}
+
+class DeliveryOrder extends Order  implements IDeliveryOrderPriceCalculator{
+  private static readonly SHIPPING_COST: number = 10;
+
+  public calculateTotalPrice() {
+    return this.price + DeliveryOrder.SHIPPING_COST;
+  }
+}
+
+class PickUpOrder extends Order {}
 ```
 
 _**[TOP ↑](#solid-principles)**_
