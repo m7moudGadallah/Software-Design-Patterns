@@ -16,6 +16,9 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles b
     - [OCP Examples](#ocp-examples)
       - [DiscountCalculator Example](#discountcalculator-example)
       - [PaymentProcessing Service Example](#paymentprocessing-service-example)
+  - [Liskov Substitution Principle LSP](#liskov-substitution-principle-lsp)
+    - [LSP Examples](#lsp-examples)
+      - [Employee Example](#employee-example)
 
 <!-- /TOC -->
 
@@ -178,6 +181,86 @@ class PaymentProcessingService {
 
   processPayment(order: Order): void {
     this.paymentStrategy.processPayment(order.getPrice());
+  }
+}
+```
+
+_**[TOP ↑](#solid-principles)**_
+
+## Liskov Substitution Principle (LSP)
+
+- If S is a subtype of T then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program
+
+### LSP Examples
+
+#### Employee Example
+
+**Before:**
+
+![Employee Example Before](./uml-diagrams/LSP/employee-before.png)
+
+```typescript
+class Employee {
+  protected name: string;
+  protected hoursWorked: number;
+
+  constructor(name: string, hoursWorked: number) {
+    this.name = name;
+    this.hoursWorked = hoursWorked;
+  }
+
+  public calculateSalary(): number {
+    return this.hoursWorked * 10;
+  }
+}
+
+class FullTimeEmployee extends Employee {
+  public override calculateSalary(): number {
+    return super.calculateSalary() + 100;
+  }
+}
+
+class PartTimeEmployee extends Employee {
+  public override calculateSalary(): number {
+    return super.calculateSalary() + 50;
+  }
+}
+```
+
+**After:**
+
+![Employee Example After](./uml-diagrams/LSP/employee-after.png)
+
+```typescript
+class Employee {
+  protected name: string;
+  protected hoursWorked: number;
+
+  constructor(name: string, hoursWorked: number) {
+    this.name = name;
+    this.hoursWorked = hoursWorked;
+  }
+}
+
+interface IEmployeeSalaryCalculator {
+  calculateSalary(employee: Employee): number;
+}
+
+class FullTimeEmployeeSalaryCalculator
+  extends Employee
+  implements IEmployeeSalaryCalculator
+{
+  calculateSalary(employee: Employee): number {
+    return employee.hoursWorked * 100;
+  }
+}
+
+class PartTimeEmployeeSalaryCalculator
+  extends Employee
+  implements IEmployeeSalaryCalculator
+{
+  calculateSalary(employee: Employee): number {
+    return employee.hoursWorked * 50;
   }
 }
 ```
