@@ -7,8 +7,8 @@
 - [Software Design Patterns](#software-design-patterns)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
-  - [Resources](#resources)
   - [Contents](#contents)
+  - [Resources](#resources)
   - [Disclaimers](#disclaimers)
   - [License](#license)
 
@@ -18,15 +18,15 @@
 
 This repository contains the implementation and examples of the most common software design patterns. The examples are written in TypeScript, but the concepts can be applied to any programming language.
 
-## Resources
-
-- [Ultimate Design Patterns Course By (Mahmoud Youssef) on Udemy](https://www.udemy.com/course/ultimate-design-patterns/)
-- [Design Patterns on GURU](https://refactoring.guru/design-patterns)
-
 ## Contents
 
 - [SOLID Principles](./solid-principles/)
 - [Design Patterns](./design-patterns/)
+
+## Resources
+
+- [Ultimate Design Patterns Course By (Mahmoud Youssef) on Udemy](https://www.udemy.com/course/ultimate-design-patterns/)
+- [Design Patterns on GURU](https://refactoring.guru/design-patterns)
 
 ## Disclaimers
 
