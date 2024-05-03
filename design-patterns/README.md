@@ -8,12 +8,16 @@
   - [Table of Contents](#table-of-contents)
   - [Behavioral Patterns](#behavioral-patterns)
     - [Observer Pattern](#observer-pattern)
+      - [Observer Pattern Example](#observer-pattern-example)
+      - [Observer Pattern Exercise](#observer-pattern-exercise)
 
 <!-- /TOC -->
 
 ## Behavioral Patterns
 
 ### Observer Pattern
+
+#### Observer Pattern Example
 
 **Use Case:**
 
@@ -28,6 +32,24 @@
 
 - Look at the [Marketplace Notification System](./observer) for the implementation.
 - Run command `yarn install`
-- Run command `yarn start`
+- Run command `yarn run start:marketplace`
+
+#### Observer Pattern Exercise
+
+**Use Case:**
+
+- Develop a newsletter for an author who wants to notify his subscribers about each new blog post or newsletter weekly.
+- Considering that subscribers might want to get notifications for each blog post, newsletter, or both of them,.
+- Subscribers can also unsubscribe, and then they should not get any notifications.
+
+**Design:**
+
+![newsletter-notification-system](./observer/design/newsletter-notification-system.png)
+
+**Implementation:**
+
+- Look at the [Newsletter System](./observer) for the implementation.
+- Run command `yarn install`
+- Run command `yarn run start:newsletter`
 
 _**[TOP ↑](#design-patterns)**_

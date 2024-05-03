@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npx ts-node ./src/main.ts"
+    "start:marketplace": "npx ts-node ./src/runMarketPlace.ts",
+    "start:newsletter": "npx ts-node ./src/runNewsletter.ts"
   },
   "dependencies": {
     "@types/node": "^20.12.7",
