@@ -10,6 +10,9 @@
     - [Observer Pattern](#observer-pattern)
       - [Observer Pattern Example](#observer-pattern-example)
       - [Observer Pattern Exercise](#observer-pattern-exercise)
+    - [Strategy Pattern](#strategy-pattern)
+      - [Strategy Pattern Example](#strategy-pattern-example)
+      - [Strategy Pattern Exercise 1](#strategy-pattern-exercise-1)
 
 <!-- /TOC -->
 
@@ -72,5 +75,22 @@ _**[TOP ↑](#design-patterns)**_
 - Look at the [Ecommerce System](./strategy/) for the implementation.
 - Run command `yarn install`
 - Run command `yarn run start:ecommerce`
+
+_**[TOP ↑](#design-patterns)**_
+
+#### Strategy Pattern Exercise 1
+
+**Use Case:**
+
+- We want to create a marketplace notification system where users can subscribe to notifications for new product arrivals or new offers in an online marketplace. Whenever a new product or new offer is added to the marketplace, subscribed users should receive notifications.
+- We should allow both adding new subscribers and cancelling subscription as well.
+
+**Design:**
+
+![Notification-System](./strategy/design/notification-system.png)
+
+**Implementation:**
+
+- It's easy to implement this example by following the UML Diagram Above.
 
 _**[TOP ↑](#design-patterns)**_
