@@ -53,3 +53,24 @@
 - Run command `yarn run start:newsletter`
 
 _**[TOP ↑](#design-patterns)**_
+
+### Strategy Pattern
+
+#### Strategy Pattern Example
+
+**Use Case:**
+
+- Develop an e-commerce platform where different products may have varying pricing logic based on factors such as customer segment. We have regular, gold and premium membership.
+- Once product price is calculated, then at the checkout the customer could pay with different methods like PayPal, VisaCard and BankTransfer. Each payment method vary in it’s logic of processing the payment and conducting required fees.
+
+**Design:**
+
+![ecommerce-system](./strategy/design/ecommerce-example.png)
+
+**Implementation:**
+
+- Look at the [Ecommerce System](./strategy/) for the implementation.
+- Run command `yarn install`
+- Run command `yarn run start:ecommerce`
+
+_**[TOP ↑](#design-patterns)**_
